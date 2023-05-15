@@ -1,0 +1,13 @@
+<DOCTYPE html>
+            <html>
+                <head>
+                    <meta http-equiv="refresh" content="2;url='/state-consumer/new-york'" />
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                    <script>
+                        window.location.replace("/state-consumer/new-york");
+                    </script>
+                </head>
+                <body>
+                    <p>This page has moved. Click <a href="/state-consumer/new-york">/state-consumer/new-york</a> to go to the new page.</p>
+                </body>
+            </html>

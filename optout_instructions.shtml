@@ -1,0 +1,13 @@
+<DOCTYPE html>
+            <html>
+                <head>
+                    <meta http-equiv="refresh" content="2;url='/optout-instructions'" />
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                    <script>
+                        window.location.replace("/optout-instructions");
+                    </script>
+                </head>
+                <body>
+                    <p>This page has moved. Click <a href="/optout-instructions">/optout-instructions</a> to go to the new page.</p>
+                </body>
+            </html>

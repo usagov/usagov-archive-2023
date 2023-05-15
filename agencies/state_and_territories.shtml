@@ -1,0 +1,13 @@
+<DOCTYPE html>
+            <html>
+                <head>
+                    <meta http-equiv="refresh" content="2;url='/state-tribal-governments'" />
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                    <script>
+                        window.location.replace("/state-tribal-governments");
+                    </script>
+                </head>
+                <body>
+                    <p>This page has moved. Click <a href="/state-tribal-governments">/state-tribal-governments</a> to go to the new page.</p>
+                </body>
+            </html>

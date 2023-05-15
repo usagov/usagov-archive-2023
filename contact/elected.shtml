@@ -1,0 +1,13 @@
+<DOCTYPE html>
+            <html>
+                <head>
+                    <meta http-equiv="refresh" content="2;url='/elected-officials'" />
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                    <script>
+                        window.location.replace("/elected-officials");
+                    </script>
+                </head>
+                <body>
+                    <p>This page has moved. Click <a href="/elected-officials">/elected-officials</a> to go to the new page.</p>
+                </body>
+            </html>

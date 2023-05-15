@@ -1,0 +1,13 @@
+<DOCTYPE html>
+            <html>
+                <head>
+                    <meta http-equiv="refresh" content="2;url='https://digital.gov/services/u-s-digital-registry/'" />
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                    <script>
+                        window.location.replace("https://digital.gov/services/u-s-digital-registry/");
+                    </script>
+                </head>
+                <body>
+                    <p>This page has moved. Click <a href="https://digital.gov/services/u-s-digital-registry/">https://digital.gov/services/u-s-digital-registry/</a> to go to the new page.</p>
+                </body>
+            </html>

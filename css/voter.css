@@ -1,0 +1,141 @@
+
+/*Generic Styling, for Desktops/Laptops */
+table#voteage {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0 0 10px 0;
+}
+#voteage tr{
+	border: 1px solid #E4EAEE;
+	padding: 5px;
+}
+#voteage tr:last-child {
+	border-bottom: none;
+}
+#voteage tr:hover, #voteage tr:focus, #voteage tr:active, #voteage tr:nth-of-type(odd):hover, #voteage tr:nth-of-type(odd):focus, #voteage tr:nth-of-type(odd):active {
+ background-color:#fdff66;
+}
+#voteage thead th {
+	background: #1b50a0;
+	color: #FFF;
+	font-weight: bold;
+}
+
+
+/* Zebra striping */
+#voteage th, #voteage td{
+background-color:initial;
+}
+
+#voteage th, #voteage td {
+	padding: 10px;
+	border: 1px solid #E4EAEE;
+	text-align: left;
+}
+
+#voteage tr:nth-of-type(odd){
+ background: #E4EAEE;
+ padding: 5px 0px 10px 5px;
+}
+
+#voteage tbody tr:nth-of-type(odd) td {
+ border-right:1px solid #FFF;
+}
+#voteage tbody tr:nth-of-type(odd) th {
+border-right:1px solid #FFF;
+}
+#voteage tbody tr:nth-of-type(odd) td {
+border-right:1px solid #FFF;
+}
+#voteage tbody tr:nth-of-type(odd) td:last-child {
+border-right:1px solid #E4EAEE;
+}
+#voteage tbody tr:nth-of-type(odd) td:last-child {
+ border-right:1px solid #E4EAEE;
+}
+.even-row {
+	color:#000;
+	background-color:#FFF;
+}
+.odd-row {
+	color:#000;
+	background: #E4EAEE;
+}
+
+#voteage td:last-child {
+	border-bottom: 3px sold red;
+}
+caption {
+	margin: 20px 20px 20px 0px;
+	padding: 5px 5px 5px 0px;
+	font-size: 110%;
+	caption-side:top;
+	/*color: #1a51a1;
+	font-weight: bold;*/
+	text-align:left;
+}
+@media only screen and (max-width: 768px){
+/* Force table to not be like tables anymore */
+#voteage, thead, tbody, th, td, tr {
+ display: block;
+ border:none;
+}
+#voteage tr {
+ border: 1px solid #E4EAEE;
+ border-bottom: 4px solid #26558b;
+/*padding: 5px;*/
+}
+#voteage td:last-child {
+ border-bottom: 0;
+}
+#voteage tbody tr:nth-of-type(odd) th {
+border-right:1px solid #E4EAEE;
+}
+#voteage tbody tr:nth-of-type(odd) td {
+ border-right:1px solid #E4EAEE;
+}
+
+
+/* Hide table headers (but not display: none;, for accessibility) */
+#voteage thead tr {
+ position: absolute;
+ top: -9999px;
+ left: -9999px;
+}
+#voteage th, #voteage td {
+/* Behave  like a "row" */
+ border: none;
+ position: relative;
+ padding-left: 50%;
+ font-weight: normal;
+}
+#voteage th:before,#voteage td:before {
+/* Now like a table header */
+ position:absolute;
+/* Top/left values mimic padding */
+ top: 6px;
+ left: 6px;
+ width: 45%;
+ padding: 0 10px 0 0;
+ white-space: normal;
+ color: #000;
+ font-weight:bold;
+}
+/*Label the data*/
+
+#voteage td:nth-of-type(1):before {
+ content: "State";
+}
+#voteage td:nth-of-type(1):before {
+ content: "Earliest Age";
+}
+ caption {
+ margin: 10px 10px 10px 0px;
+ padding: 5px 5px 5px 0px;
+ caption-side:top;
+ font-size:110%;
+ /*font-color: #00F;*/
+ display:block;
+}
+}
