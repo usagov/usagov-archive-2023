@@ -7,7 +7,7 @@
                         window.location.replace("/site-index");
                     </script>
                   <base href="https://federalist-36a58435-bbf2-47f1-8c05-dd08d446e3cf.sites.pages.cloud.gov/site/usagov/usagov-archive-2023/">
-</head>
+<meta name="robots" content="noindex"> </head>
                 <body>
                     <p>This page has moved. Click <a href="site-index">/site-index</a> to go to the new page.</p>
                 </body>
