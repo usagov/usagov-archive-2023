@@ -55,7 +55,7 @@ jQuery(document).ready(function() {
 
     jQuery('#cind').val(1);
     // after load
-    
+
     //_sendajaxreq(page=0, scrolll=0, paginated=0, init=2 means not initialized?);
     _sendajaxreq(0, 0, 0, 2);
 
@@ -370,14 +370,14 @@ function _sendajaxreq(p, scrolll, paginated, init) {
         'do_index': parseInt(jQuery('#storeuserinput').val()),
         'from':p
     };
-    
+
     var params_array =[];
    //params_array.push('do_index='+parseInt(jQuery('#storeuserinput').val()));
   // params_array.push('from='+p);
-   console.log(params_array); 
+   console.log(params_array);
    if (jQuery('#storeuserinput').val().length > 0){
     params_array.push('ptype=p,k,r','active=yes');
-    }   
+    }
     if (jQuery('#business-search').val().length > 0){
         params_array.push('title='+jQuery('#business-search').val());
     }
@@ -435,8 +435,8 @@ function renderResults(p, scrolll, paginated, init){
         var sspan = '';
         var cur_ind = 1;
         var keyword = jQuery('#business-search').val();
-        
-        
+
+
         if (p == 0) {
             start = 1;
         }
@@ -535,8 +535,8 @@ function renderResults(p, scrolll, paginated, init){
                 opptypetooltip = 'This is a request for information about a potential contract.';
                 data.opportunitiesData[opp].type = 'Sources Sought';
             }
-                
-            
+
+
 
             if (data.opportunitiesData[opp].typeOfSetAside == 'SBA'){
                 setasidetypetooltip = 'For small businesses. Must meet SBA size standards.';
@@ -582,21 +582,21 @@ function renderResults(p, scrolll, paginated, init){
             if (data.opportunitiesData[opp].officeAddress.zipcode == null){
                 data.opportunitiesData[opp].officeAddress.zipcode = 'N/A';
             }
-            
+
             if (jQuery('#business-search').val().length > 0){
                 var descUrl = data.opportunitiesData[opp].description + '&api_key=9zg7A5iGbmBE0F8X0ufgU0xwm279YpXivZ8q50wO' +  '&keyword=' + keyword;;
             }
             var descUrl = data.opportunitiesData[opp].description + '&api_key=9zg7A5iGbmBE0F8X0ufgU0xwm279YpXivZ8q50wO';
-            
+
 
             html_list += '<section><div class="section-box">';
 
             html_list += '<div class="result-details">';
             html_list += '<div class="result-details-column"> <span><strong><a target="_blank" href="'+data.opportunitiesData[opp].uiLink+'" >'+data.opportunitiesData[opp].title+'</a></strong><br>'+data.opportunitiesData[opp].solicitationNumber+'</span> </div>';
             html_list += '<div class="result-details-column"> <span><strong>Opportunity Type:</strong><br>'+data.opportunitiesData[opp].baseType;
-            html_list += '<span class="tooltip2" role="tooltip" tabindex="0"> <img class="tooltip-icon2" src="/sites/all/themes/usa/images/Icon_Tooltip.png" alt="tooltip" aria-hidden="true" ><span class="tooltiptext">'+opptypetooltip+'</span><span aria-label="Tooltip - '+opptypetooltip+'"></span></span> </span>';
-            html_list += '<div><strong>Set-Aside Type:</strong><br>'+data.opportunitiesData[opp].typeOfSetAside +'<span class="tooltip2" role="tooltip" tabindex="0"> <img class="tooltip-icon2" src="/sites/all/themes/usa/images/Icon_Tooltip.png" alt="tooltip" aria-hidden="true" ><span class="tooltiptext">'+setasidetypetooltip+'</span><span aria-label="Tooltip - '+setasidetypetooltip+'"></span></span> </div>';
-            html_list += '<div><strong>Posted:</strong><br>'+ ddate +'<span class="tooltip2" role="tooltip" tabindex="0"> <img class="tooltip-icon2" src="/sites/all/themes/usa/images/Icon_Tooltip.png" alt="tooltip" aria-hidden="true" ><span class="tooltiptext">The date range an opportunity is open. Some do not have closing dates.</span><span aria-label="Tooltip - The date range an opportunity is open. Some do not have closing dates."></span></span> </div>';
+            html_list += '<span class="tooltip2" role="tooltip" tabindex="0"> <img class="tooltip-icon2" src="../images/Icon_Tooltip.png" alt="tooltip" aria-hidden="true" ><span class="tooltiptext">'+opptypetooltip+'</span><span aria-label="Tooltip - '+opptypetooltip+'"></span></span> </span>';
+            html_list += '<div><strong>Set-Aside Type:</strong><br>'+data.opportunitiesData[opp].typeOfSetAside +'<span class="tooltip2" role="tooltip" tabindex="0"> <img class="tooltip-icon2" src="../images/Icon_Tooltip.png" alt="tooltip" aria-hidden="true" ><span class="tooltiptext">'+setasidetypetooltip+'</span><span aria-label="Tooltip - '+setasidetypetooltip+'"></span></span> </div>';
+            html_list += '<div><strong>Posted:</strong><br>'+ ddate +'<span class="tooltip2" role="tooltip" tabindex="0"> <img class="tooltip-icon2" src="../images/Icon_Tooltip.png" alt="tooltip" aria-hidden="true" ><span class="tooltiptext">The date range an opportunity is open. Some do not have closing dates.</span><span aria-label="Tooltip - The date range an opportunity is open. Some do not have closing dates."></span></span> </div>';
             html_list += '</div>'; //result-details-column close
 
             html_list += '<div class="result-details-column"><address><strong>Agency:</strong><br>'+data.opportunitiesData[opp].department+'<br>';
@@ -608,7 +608,7 @@ function renderResults(p, scrolll, paginated, init){
             html_list += '<button class="usa-accordion-button ttt" aria-expanded="false" aria-controls="result'+opp+'"><span class="element-invisible">'+data.opportunitiesData[opp].title+'</span>Description of Opportunity</button>';
             html_list += '<div id="result'+opp+'" class="usa-accordion-content" aria-hidden="true">';
 
-            html_list += '<p class="description">loading...</p>';    
+            html_list += '<p class="description">loading...</p>';
             html_list += '<p><strong><a target="_blank" href="'+data.opportunitiesData[opp].uiLink+'"><span class="element-invisible">The view contact and bid information for opportunity will open in a new window.</span>View any uploaded documents, contact information, and bidding requirements <span class="element-invisible">'+data.opportunitiesData[opp].subject+'</span></a></strong></p>';
             html_list += '</div></div></div></div></div>';
 
@@ -621,7 +621,7 @@ function renderResults(p, scrolll, paginated, init){
             }
 
             html_list += '<br><br>';
-                
+
         }
 
         maincontainer.removeClass('loading');
